@@ -1,0 +1,14 @@
+.options-wrapper {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.option-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: lightseagreen;
+  color: white;
+  font-size: 16px;
+}
