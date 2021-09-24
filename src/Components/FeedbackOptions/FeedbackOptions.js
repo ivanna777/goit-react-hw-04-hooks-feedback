@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
 import styles from "./FeedbackOptions.module.css"
 
-export default function FeedbackOptions({ good, neutral, bad, onLeaveGoodFeedback, onLeaveNeutralFeedback, onLeaveBadFeedback }) {
+export default function FeedbackOptions({ options, onLeaveFeedback}) {
   
     return (
           <div className={styles["options-wrapper"]}>
-          <button className={styles["option-btn"]}  type="button" onClick={ onLeaveGoodFeedback} name ={good}>Good {good}</button>
-          <button className={styles["option-btn"]} type="button" onClick={ onLeaveNeutralFeedback} name ={neutral}>Neutral {neutral}</button>
-          <button className={styles["option-btn"]} type="button" onClick={ onLeaveBadFeedback} name ={bad}>Bad {bad}</button>
+          {options.map((option) => (
+          <button className={styles["option-btn"]} key={ option} type="button" onClick={onLeaveFeedback} name ={option}>
+            {option}
+          </button>
+            ))}
             
       </div> 
         )
