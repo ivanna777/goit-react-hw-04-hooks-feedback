@@ -9,27 +9,20 @@ export default function App() {
   const [neutralFeedback, setNeutralFeedback] = useState(0);
   const [badFeedback, setBadFeedback] = useState(0);
 
-  // const leaveGoodFeedback = (e) =>
-  //   setGoodFeedback((prevGoodFeedback) => prevGoodFeedback + 1);
-  // const leaveNeutralFeedback = (e) =>
-  //   setNeutralFeedback((prevNeutralFeedback) => prevNeutralFeedback + 1);
-  // const leaveBadFeedback = (e) =>
-  //   setBadFeedback((prevBadFeedback) => prevBadFeedback + 1);
-
   const leaveFeedback = (e) => {
     const feedback = e.currentTarget.name;
 
     switch (feedback) {
       case "goodFeedback":
-        setGoodFeedback((prevGoodFeedback) => goodFeedback + 1);
+        setGoodFeedback(goodFeedback + 1);
 
         break;
       case "neutralFeedback":
-        setNeutralFeedback((prevNeutralFeedback) => neutralFeedback + 1);
+        setNeutralFeedback(neutralFeedback + 1);
 
         break;
       case "badFeedback":
-        setBadFeedback((prevBadFeedback) => badFeedback + 1);
+        setBadFeedback(badFeedback + 1);
 
         break;
 
